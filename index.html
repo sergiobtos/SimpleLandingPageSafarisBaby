@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/style.css" />
+
     <title>Safari's Bay</title>
   </head>
   <body>
@@ -33,6 +38,7 @@
       </nav>
     </header>
     <main>
+      <!-- Home -->
       <section class="section" id="home">
         <div class="container grid">
           <div class="image">
@@ -52,6 +58,7 @@
         </div>
       </section>
       <div class="divider-1"></div>
+      <!--About -->
       <section class="section" id="about">
         <div class="container grid">
           <div class="image">
@@ -87,7 +94,7 @@
       </section>
 
       <div class="divider-2"></div>
-
+      <!--Services-->
       <section class="section" id="services">
         <div class="container grid">
           <header>
@@ -143,8 +150,109 @@
           </div>
         </div>
       </section>
+      <div class="divider-1"></div>
+      <!--Testimonials-->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">
+              Testimonials from those who have been through here.
+            </h2>
+          </header>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia, officiis repellendus consectetur rem magnam odio
+                    iusto incidunt velit laudantium dolores hic, adipisci maxime
+                    delectus quisquam numquam deleniti voluptates voluptatibus!
+                    Harum.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/37.jpg"
+                      alt="Wanessa Souza"
+                    />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia, officiis repellendus consectetur rem magnam odio
+                    iusto incidunt velit laudantium dolores hic, adipisci maxime
+                    delectus quisquam numquam deleniti voluptates voluptatibus!
+                    Harum.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/57.jpg"
+                      alt=""
+                    />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimonial swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia, officiis repellendus consectetur rem magnam odio
+                    iusto incidunt velit laudantium dolores hic, adipisci maxime
+                    delectus quisquam numquam deleniti voluptates voluptatibus!
+                    Harum.
+                  </p>
+                  <cite>
+                    <img
+                      src="https://randomuser.me/api/portraits/women/92.jpg"
+                      alt=""
+                    />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider-2"></div>
+      <!--Contact-->
+      <div class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Contact us</h2>
+            <p>
+              Contact with this store, we want answer all yours questions,
+              listen yours criticism and suggestions.
+            </p>
+            <a href="#" class="button" target="_blank"><i class="icon-whatsapp"></i>Send a message</a>
+          </div>
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i>+1 647 573 7777</li>
+              <li><i class="icon-location"></i>2653 Dufferin Street</li>
+              <li><i class="icon-mail4"></i>contato@hotmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer>Footer</footer>
+
+    <!--Swiper-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!--Scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
   </body>
 </html>
