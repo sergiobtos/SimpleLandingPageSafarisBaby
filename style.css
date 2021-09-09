@@ -21,10 +21,13 @@ img {
 /* ==============variables================= */
 :root {
   --header-height: 4.5rem;
+
+  /*colors*/
   --hue: 159;
+  /*HSL color mode*/
   --base-color: hsl(var(--hue) 36% 57%);
   --base-color-second: hsl(var(--hue) 65% 88%);
-  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --base-color-alt: hsl(var(--hue) 41% 10%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
@@ -39,10 +42,10 @@ img {
 }
 
 /* ==============base================= */
-
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font: 400 1rem var(--body-font);
   color: var(--text-color);
@@ -110,10 +113,11 @@ body {
 }
 
 .section .subtitle {
-  margin-bottom: 1rem;
-}
-.section header {
   font-size: var(--subtitle-font-size);
+}
+
+.section header {
+  margin-bottom: 4rem;
 }
 
 .section header strong {
@@ -121,9 +125,10 @@ body {
 }
 
 #header {
-  border-bottom: 1px #e4e4e4 !important;
+  border-bottom: 1px solid #e4e4e4 !important;
   margin-bottom: 2rem;
   display: flex;
+
   width: 100%;
   position: fixed;
   top: 0;
@@ -133,21 +138,12 @@ body {
 }
 
 #header.scroll {
-  background: var(--base-color);
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-}
-
-#header.scroll .logo span {
-  color: white;
-}
-
-#header.scroll .icon-menu {
-  color: white;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ==============logo================= */
 .logo {
-  font: 700 1.875rem var(--title-font);
+  font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
 
@@ -174,11 +170,11 @@ nav ul li {
 
 nav ul li a {
   position: relative;
-  transition: color 0.3s;
+  transition: color 0.2s;
 }
 
 nav ul li a:hover,
-nav ul li a.active{
+nav ul li a.active {
   color: var(--base-color);
 }
 
@@ -429,10 +425,6 @@ nav.show div.icon-cross {
   padding: 4rem 1rem;
 }
 
-.swiper-pagination {
-  position: relative;
-}
-
 .swiper-pagination-bullet {
   width: 0.75rem;
   height: 0.75rem;
@@ -472,14 +464,14 @@ nav.show div.icon-cross {
 
 /*====  Footer ============================ */
 footer {
-  background-color: var(--base-color);
+  background: var(--base-color);
 }
 
 footer .section {
   padding: 4rem 0;
 }
 
-footer .brand .logo {
+footer .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
 }
@@ -494,14 +486,24 @@ footer i {
   color: var(--text-color-light);
 }
 
+footer .social {
+  grid-auto-flow: column;
+  width: fit-content;
+}
+
 footer .social a {
-  margin-right: 2rem;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+footer .social a:hover {
+  transform: translateY(-8px);
 }
 
 /*====  Back to top ============================ */
 .back-to-top {
-  color: var(--base-color);
-  background: var(--text-color-light);
+  background: var(--base-color);
+  color: var(--text-color-light);
 
   position: fixed;
   right: 1rem;
@@ -515,7 +517,9 @@ footer .social a {
 
   visibility: hidden;
   opacity: 0;
+
   transition: 0.3s;
+  transform: translateY(100%);
 }
 
 .back-to-top.show {
@@ -532,6 +536,7 @@ footer .social a {
     margin-left: auto;
     margin-right: auto;
   }
+
   .section {
     padding: 10rem 0;
   }
@@ -552,7 +557,7 @@ footer .social a {
   nav .menu {
     opacity: 1;
     visibility: visible;
-    margin-top: 0;
+    top: 0;
   }
 
   nav .menu ul {
@@ -562,18 +567,19 @@ footer .social a {
 
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
-    -webkit-font-smoothing:antialiased;
+    -webkit-font-smoothing: antialiased;
   }
 
   nav .menu ul li a.title.active {
     font-weight: bold;
-    -webkit-font-smoothing:auto;
+    -webkit-font-smoothing: auto;
   }
 
   nav .icon-menu {
     display: none;
   }
 
+  /*layout*/
   main {
     margin-top: var(--header-height);
   }
@@ -603,7 +609,7 @@ footer .social a {
 
   /*services */
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .cards {
